@@ -1,0 +1,15 @@
+<template>
+  <section>
+      <h2>${heading}</h2>
+      <div class="row">
+      <div class="col-sm-6 col-md-3" repeat.for="bet of bets">
+        <h3>Bet</h3>
+        <p>${bet.BetId}</p>
+        <p>${bet.Solicitor}</p>
+        <p>${bet.Terms}</p>
+        <p>${bet.Score}</p>
+        <p>${bet.IsConfirmed.toString()}</p>
+      </div>
+      </div>
+  </section>
+</template>

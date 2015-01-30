@@ -1,0 +1,8 @@
+body > div.page-host {
+  padding: 50px;
+}
+
+a.thumbnail > img {
+  width: 260px;
+  height: 180px;
+}
