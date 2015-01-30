@@ -1,21 +1,24 @@
+import { Urls } from '../settings/urls';
+import { Keys } from '../settings/keys';
 import { HttpClient } from 'aurelia-http-client';
-
-var urls = {
-  validate: 'http://localhost:52857/api/token/validate/'
-}
 
 export class TokenRepository {
 
-  static inject() { return [HttpClient]; }
+  static inject() { return [Urls, Keys, HttpClient]; }
 
-  constructor(http) {
+  constructor(urls, keys, http) {
+    this.urls = urls;
+    this.keys = keys;
     this.http = http;
   }
 
   validate(token)
   {
-    return this.http.post(urls.validate + token).then(response => {
-      return response.content.IsValid;
+    var url = this.urls.baseApi + this.urls.token.validate(token);
+    var validKey = this.keys.token.isValid;
+
+    return this.http.post(url).then(response => {
+      return response.content[validKey];
     });
   }
 }

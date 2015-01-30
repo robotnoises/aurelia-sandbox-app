@@ -10,8 +10,8 @@ export class TempPage {
   }
 
   activate(params) {
-    return this.repo.validate(params.token).then(resp => {
-      this.tokenValid = resp;
+    return this.repo.validate(params.token).then(response => {
+      this.tokenValid = response;
     });
   }
 }
