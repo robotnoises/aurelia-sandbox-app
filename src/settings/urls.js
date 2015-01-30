@@ -1,5 +1,7 @@
+var baseApi = "http://localhost:52857/api/";
+
 var token = {
-  validate: function (token) { return 'token/validate/' + token }
+  validate: function (token) { return baseApi + 'token/validate/' + token }
 }
 
 Object.freeze(token);
@@ -7,9 +9,9 @@ Object.freeze(token);
 export class Urls {
 
   get baseApi() {
-    return "http://localhost:52857/api/";
+    return baseApi;
   }
-  
+
   get token() {
     return token;
   }

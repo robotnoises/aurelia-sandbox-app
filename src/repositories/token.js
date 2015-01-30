@@ -12,9 +12,8 @@ export class TokenRepository {
     this.http = http;
   }
 
-  validate(token)
-  {
-    var url = this.urls.baseApi + this.urls.token.validate(token);
+  validate(token) {
+    var url = this.urls.token.validate(token);
     var validKey = this.keys.token.isValid;
 
     return this.http.post(url).then(response => {
