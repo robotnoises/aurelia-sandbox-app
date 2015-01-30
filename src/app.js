@@ -7,10 +7,19 @@ export class App {
   constructor(router) {
     this.router = router;
     this.router.configure(config => {
-      config.title = '';
+      config.title = 'Cool Title';
       config.map([
-        { route: ['', 'welcome'], moduleId: 'welcome', nav: true, title: 'Welcome' },
-        { route: ['bets'], moduleId: 'foo', nav: true, title: 'Bets' }
+        {
+          route: ['', 'welcome'],
+          moduleId: './modules/welcome',
+          nav: true,
+          title: 'Welcome'
+        },
+        {
+          route: ['t/:token'],
+          moduleId: './modules/tempPage',
+          nav: false
+        }
       ]);
     });
   }

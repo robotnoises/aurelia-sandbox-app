@@ -5,7 +5,7 @@ export class Welcome{
     this.lastName = 'Doe';
   }
 
-  get foo(){
+  get fullName(){
     return `${this.firstName} ${this.lastName}`;
   }
 
