@@ -1,10 +1,11 @@
 html, body {
   background: #fff;
+  font-size: 16px;
 }
 
 
 h1, h2, h3, h4, h5, p, a, div, section {
-  font-family: 'Crete Round', serif !important;
+  font-family: 'Crete Round', serif;
 }
 
 body > div.page-host {
@@ -29,7 +30,6 @@ a.thumbnail > img {
 .form-control:focus {
   box-shadow: none;
   border: none;
-  /*font-weight: 700;*/
   font-size: 1.1em;
   background-color: #ffe;
 }
