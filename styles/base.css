@@ -1,3 +1,12 @@
+html, body {
+  background: #fff;
+}
+
+
+h1, h2, h3, h4, h5, p, a, div, section {
+  font-family: 'Crete Round', serif !important;
+}
+
 body > div.page-host {
   padding: 50px;
 }
@@ -5,4 +14,26 @@ body > div.page-host {
 a.thumbnail > img {
   width: 260px;
   height: 180px;
+}
+
+/* Bootstrap overrides */
+
+.form-control {
+  border: none;
+  box-shadow: none;
+
+  -webkit-transition: background-color, font-size 200ms;
+  transition: background-color, font-size 200ms;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: none;
+  /*font-weight: 700;*/
+  font-size: 1.1em;
+  background-color: #ffe;
+}
+
+input.form-control {
+  background: inherit;
 }
